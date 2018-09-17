@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:200,300,400");
 $font-montserrat: "Montserrat", sans-serif;
 $primary-color: #444;
+// $primary-color: #fff;
 $secondary-color: #eece1a;
 $show-home-image: true;
 $home-image: url(../img/background.jpg);
@@ -37,6 +38,15 @@ $background-opacity: 0.75;
         z-index: -1;
       }
     }
+  }
+}
+
+// set text color
+@function set-text-color($color) {
+  @if (lightness($color) > 40) {
+    @return #000;
+  } @else {
+    @return #fff;
   }
 }
 
